@@ -23,5 +23,17 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        echo 'build'
+      }
+    }
+
+    stage('Clean up') {
+      steps {
+        echo 'clean up'
+      }
+    }
+
   }
 }
