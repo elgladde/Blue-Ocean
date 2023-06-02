@@ -6,9 +6,20 @@ pipeline {
 
   }
   stages {
-    stage('') {
-      steps {
-        echo 'Testing'
+    stage('Testing') {
+      parallel {
+        stage('Testing') {
+          steps {
+            echo 'Testing'
+          }
+        }
+
+        stage('parallel') {
+          steps {
+            echo 'parallel'
+          }
+        }
+
       }
     }
 
